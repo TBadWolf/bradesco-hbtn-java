@@ -24,11 +24,13 @@ public class Pedido {
     }
 
     public double calcularTotal() {
-        double valorTotalPedido = 0;
-        for(ItemPedido itensPedidos: itens){
-            valorTotalPedido += (itensPedidos.getQuantidade() * itensPedidos.getProduto().obterPrecoLiquido());
+        double valorTotalPedido = 0.0;
+        for (ItemPedido itensPedidos : itens) {
+            double precoLiquido = itensPedidos.getProduto().obterPrecoLiquido();
+            int quantidade = itensPedidos.getQuantidade();
+            valorTotalPedido += quantidade * precoLiquido;
         }
-        double desconto = valorTotalPedido * (this.percentualDesconto/100);
+        double desconto = valorTotalPedido * (this.percentualDesconto / 100.0);
         return valorTotalPedido - desconto;
     }
 }
