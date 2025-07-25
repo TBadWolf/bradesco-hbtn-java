@@ -26,11 +26,9 @@ public class Pedido {
     public double calcularTotal() {
         double valorTotalPedido = 0.0;
         for (ItemPedido itensPedidos : itens) {
-            double precoLiquido = itensPedidos.getProduto().obterPrecoLiquido();
-            int quantidade = itensPedidos.getQuantidade();
-            valorTotalPedido += quantidade * precoLiquido;
+            valorTotalPedido += itensPedidos.getProduto().obterPrecoLiquido() * itensPedidos.getQuantidade();
         }
-        double desconto = valorTotalPedido * (this.percentualDesconto / 100.0);
+        double desconto = valorTotalPedido * (percentualDesconto / 100.0);
         return valorTotalPedido - desconto;
     }
 }
