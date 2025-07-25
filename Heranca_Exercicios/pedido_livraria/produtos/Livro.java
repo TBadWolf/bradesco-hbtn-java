@@ -37,7 +37,7 @@ public class Livro extends Produto {
 
     @Override
     public double obterPrecoLiquido() {
-        double acrescimo = getPrecoBruto() * 0.2;
+        double acrescimo = getPrecoBruto() * 0.15;
         return getPrecoBruto() + acrescimo;
     }
 }
