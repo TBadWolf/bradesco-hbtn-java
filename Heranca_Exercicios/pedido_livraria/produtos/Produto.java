@@ -1,5 +1,4 @@
-package Heranca_Exercicios.pedido_livraria.produtos;
-
+package produtos;
 public abstract class Produto {
     private String titulo;
     private int ano;
