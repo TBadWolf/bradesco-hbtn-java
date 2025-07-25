@@ -17,7 +17,7 @@ public class Departamento {
     }
 
     public boolean alcancouMeta(){
-        if(valorMeta >= valorAtingidoMeta){
+        if(valorMeta <= valorAtingidoMeta){
             return true;
         }else{
             return false;
