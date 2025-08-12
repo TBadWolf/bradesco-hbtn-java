@@ -1,8 +1,4 @@
-import Interfaces_Exercicios.workflow.atividades.CarregarVideo;
-import Interfaces_Exercicios.workflow.atividades.CodificarVideo;
-import Interfaces_Exercicios.workflow.atividades.EnviarEmail;
-import Interfaces_Exercicios.workflow.atividades.ModificarStatusVideo;
-
+import atividades.*;
 public class Program {
         public static void main(String[] args) {
             MaquinaWorkflow maquinaWorkflow = new MaquinaWorkflow();

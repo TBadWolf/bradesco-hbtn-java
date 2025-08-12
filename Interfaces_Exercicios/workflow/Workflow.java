@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import Interfaces_Exercicios.workflow.atividades.Atividade;
+import atividades.Atividade;
 
 public class Workflow {
     private List<Atividade> atividades;
