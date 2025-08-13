@@ -6,28 +6,28 @@ public class Livro {
     private String autor;
     private double preco;
 
-    public Livro(String titulo, String autor, double preco) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.preco = preco;
+    public Livro(String titulo, String autor, double preco) throws AutorInvalidoException, LivroInvalidoException {
+        this.setTitulo(titulo);
+        this.setAutor(autor);
+        this.setPreco(preco);
     }
 
     public void setTitulo(String titulo) {
-        if(titulo.length() < 3) {
+        if (titulo.length() < 3) {
             throw new LivroInvalidoException("Titulo de livro invalido");
         }
         this.titulo = titulo;
     }
 
     public void setAutor(String autor) {
-        if(autor.length() < 3) {
+        if (autor.length() < 3) {
             throw new AutorInvalidoException("Nome de autor invalido");
         }
         this.autor = autor;
     }
 
     public void setPreco(double preco) {
-        if(preco < 0) {
+        if (preco < 0) {
             throw new LivroInvalidoException("Preco de livro invalido");
         }
         this.preco = preco;
