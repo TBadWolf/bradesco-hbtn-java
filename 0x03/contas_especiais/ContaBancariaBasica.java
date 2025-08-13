@@ -61,4 +61,18 @@ public class ContaBancariaBasica {
         this.saldo -= tarifa;
         this.saldo += juros;
     }
+
+    public void setNumeracao(String numeracao) {
+        this.numeracao = numeracao;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public void setTaxaJurosAnual(double taxaJurosAnual) {
+        this.taxaJurosAnual = taxaJurosAnual;
+    }
+
+    
 }
