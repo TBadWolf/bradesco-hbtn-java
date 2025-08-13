@@ -41,7 +41,7 @@ public class Livro {
         return autor;
     }
 
-    public double  getPreco() {
+    public Double  getPreco() {
         return preco;
     }
 
