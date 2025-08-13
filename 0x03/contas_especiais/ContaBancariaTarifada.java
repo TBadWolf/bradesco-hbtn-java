@@ -26,4 +26,9 @@ public class ContaBancariaTarifada extends ContaBancariaBasica {
     public void setQuantidadeTransacoes(int quantidadeTransacoes) {
         this.quantidadeTransacoes = quantidadeTransacoes;
     }
+
+    private void aplicarTaxaTransacao() {
+        quantidadeTransacoes++;
+        setSaldo(getSaldo() - 0.1);
+    }
 }

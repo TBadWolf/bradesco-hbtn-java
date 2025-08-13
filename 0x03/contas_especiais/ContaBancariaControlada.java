@@ -17,4 +17,22 @@ public class ContaBancariaControlada extends ContaBancariaBasica {
         }
     }
 
+    public double getSaldoMinimo() {
+        return saldoMinimo;
+    }
+
+    public double getValorPenalidade() {
+        return valorPenalidade;
+    }
+
+    public void setSaldoMinimo(double saldoMinimo) {
+        this.saldoMinimo = saldoMinimo;
+    }
+
+    public void setValorPenalidade(double valorPenalidade) {
+        this.valorPenalidade = valorPenalidade;
+    }
+
+    
+
 }
