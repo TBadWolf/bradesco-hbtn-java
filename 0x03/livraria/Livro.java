@@ -12,21 +12,21 @@ public class Livro {
         this.setPreco(preco);
     }
 
-    public void setTitulo(String titulo) {
+    public void setTitulo(String titulo) throws LivroInvalidoException {
         if(titulo == null || titulo.isEmpty() || titulo.length() < 3) {
             throw new LivroInvalidoException("Titulo de livro invalido");
         }
         this.titulo = titulo;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(String autor) throws AutorInvalidoException {
         if(autor == null || autor.isEmpty() || autor.trim().split("\\s+").length < 2) {
             throw new AutorInvalidoException("Nome de autor invalido");
         }
         this.autor = autor;
     }
 
-    public void setPreco(Double preco) {
+    public void setPreco(Double preco) throws LivroInvalidoException  {
         if (preco <= 0) {
             throw new LivroInvalidoException("Preco de livro invalido");
         }
