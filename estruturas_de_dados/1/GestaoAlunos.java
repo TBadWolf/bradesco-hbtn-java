@@ -11,8 +11,8 @@ public class GestaoAlunos {
         this.alunos.add(aluno);
     }
 
-    public void removerAluno(Aluno aluno) {
-        Aluno alunoEncontrado = buscarAlunoPorNome(aluno.getNome());
+    public void excluirAluno(Aluno aluno) {
+        Aluno alunoEncontrado = buscarAluno(aluno.getNome());
         if (alunoEncontrado != null) {
             this.alunos.remove(aluno);
             return;
@@ -25,7 +25,7 @@ public class GestaoAlunos {
         }
     }
 
-    public Aluno buscarAlunoPorNome(String nome) {
+    public Aluno buscarAluno(String nome) {
         for (Aluno aluno : alunos) {
             if (aluno.getNome().equalsIgnoreCase(nome)) {
                 return aluno;
