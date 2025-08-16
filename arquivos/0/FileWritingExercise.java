@@ -19,7 +19,7 @@ public class FileWritingExercise {
                     break;
                 }
                 writer.write(line);
-                writer.newLine(); // adiciona quebra de linha
+                writer.newLine();
             }
 
             System.out.println("Arquivo criado com sucesso: " + fileName);
