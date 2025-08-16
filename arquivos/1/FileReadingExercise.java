@@ -9,7 +9,7 @@ public class FileReadingExercise {
 
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
-            System.out.println("Conteúdo do arquivo '" + fileName + "':");
+            System.out.println("Conteúdo do arquivo '" + fileName + "':\n");
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
             }
@@ -17,6 +17,6 @@ public class FileReadingExercise {
         } catch (IOException e) {
             System.err.println("Erro ao ler o arquivo: " + e.getMessage());
         }
-        System.out.println("Leitura do arquivo concluída.");
+        System.out.println("\nLeitura do arquivo concluída.");
     }
 }
