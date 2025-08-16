@@ -14,15 +14,15 @@ public class GerenciamentoDeContatos {
         if (contato != null) {
             System.out.println("Erro: Contato com nome " + nome + " já existe!");
             return;
-        }
-
-        Contato contato = new Contato();
-        contato.adicionarTelefone(telefone);
-        if (contato.adicionarEmail(email)) {
-            contatos.put(nome, contato);
-            System.out.println("Contato " + nome + " adicionado com sucesso!");
         } else {
-            System.out.println("Email duplicado para o contato: " + nome);
+            contato = new Contato();
+            contato.adicionarTelefone(telefone);
+            if (contato.adicionarEmail(email)) {
+                contatos.put(nome, contato);
+                System.out.println("Contato " + nome + " adicionado com sucesso!");
+            } else {
+                System.out.println("Email duplicado para o contato: " + nome);
+            }
         }
     }
 
