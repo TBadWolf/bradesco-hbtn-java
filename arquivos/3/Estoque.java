@@ -11,7 +11,7 @@ public class Estoque {
     }
 
     private void carregarProdutos(String arquivo) {
-        List<Produto> produtos = new ArrayList<>();
+        this.produtos = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(arquivo))) {
             String linha;
             while ((linha = br.readLine()) != null) {
