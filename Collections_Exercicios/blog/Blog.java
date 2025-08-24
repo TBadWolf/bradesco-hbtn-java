@@ -12,7 +12,7 @@ public class Blog {
     }
 
     public Set<String> obterTodosAutores() {
-        Set<String> autores = new java.util.HashSet<>();
+        Set<String> autores = new TreeSet<>();
         for (Post post : postagens) {
             autores.add(post.getAutor());
         }
@@ -20,7 +20,7 @@ public class Blog {
     }
 
     public java.util.Map<String, Integer> obterContagemPorCategoria() {
-        java.util.Map<String, Integer> contagem = new java.util.HashMap<>();
+        Map<String, Integer> contagem = new TreeMap<>();
         for (Post post : postagens) {
             String categoria = post.getCategoria();
             contagem.put(categoria, contagem.getOrDefault(categoria, 0) + 1);
