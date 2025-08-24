@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Autor implements Comparable<Autor> {
     private String nome;
     private String sobrenome;
@@ -35,5 +37,20 @@ public class Autor implements Comparable<Autor> {
             return nomeComparison;
         }
         return this.sobrenome.compareTo(outro.sobrenome);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!(obj instanceof Autor))
+            return false;
+        Autor outro = (Autor) obj;
+        return this.nome.equals(outro.nome) && this.sobrenome.equals(outro.sobrenome);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, sobrenome);
     }
 }
