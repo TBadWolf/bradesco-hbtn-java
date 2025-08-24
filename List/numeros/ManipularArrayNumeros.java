@@ -1,5 +1,3 @@
-package List.numeros;
-
 import java.util.List;
 
 public class ManipularArrayNumeros {
@@ -23,7 +21,7 @@ public class ManipularArrayNumeros {
         lista.remove(Integer.valueOf(numero));
     }
 
-    public static void substituirNumero(List<Integer> lista, int numeroSubstituir , int numeroSubstituto) {
+    public static void substituirNumero(List<Integer> lista, int numeroSubstituir, int numeroSubstituto) {
         int posicao = buscarPosicaoNumero(lista, numeroSubstituir);
         if (posicao != -1) {
             lista.set(posicao, numeroSubstituto);
