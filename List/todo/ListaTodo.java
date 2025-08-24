@@ -11,8 +11,7 @@ public class ListaTodo {
     public void adicionarTarefa(Tarefa tarefa) {
         if (verificarIdentificador(tarefa.getIdentificador())) {
             throw new IllegalArgumentException(
-                "Tarefa com identificador " + tarefa.getIdentificador() + " ja existente na lista"
-            );
+                    "Tarefa com identificador " + tarefa.getIdentificador() + " ja existente na lista");
         }
         this.tarefas.add(tarefa);
     }
@@ -52,7 +51,7 @@ public class ListaTodo {
     public void listarTarefas() {
         for (Tarefa tarefa : tarefas) {
             String status = tarefa.isEstahFeita() ? "[X]" : "[ ]";
-            System.out.println(status + " " + tarefa.getIdentificador() + ": " + tarefa.getDescricao());
+            System.out.println(status + " Id: " + tarefa.getIdentificador() + " - Descricao: " + tarefa.getDescricao());
         }
     }
 
