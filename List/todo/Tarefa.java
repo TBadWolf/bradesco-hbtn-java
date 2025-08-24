@@ -41,7 +41,7 @@ public class Tarefa {
 
     public boolean verificarDescricao(String descricao) {
         boolean descricaoOk = false;
-        if (this.descricao == null || this.descricao.isEmpty()) {
+        if (descricao == null || descricao.isEmpty()) {
             throw new IllegalArgumentException("Descricao de tarefa invalida");
         }else{
             descricaoOk = true;
