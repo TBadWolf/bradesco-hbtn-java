@@ -1,5 +1,4 @@
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Blog {
     private List<Post> postagens;
