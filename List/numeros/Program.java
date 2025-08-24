@@ -13,7 +13,7 @@ public class Program {
 
         try {
             ManipularArrayNumeros.adicionarNumero(numeros, 9);
-        } catch (Exception ex) {
+        } catch(Exception ex) {
             System.out.println(ex.getMessage());
         }
 
@@ -24,7 +24,7 @@ public class Program {
 
         try {
             ManipularArrayNumeros.removerNumero(numeros, 9);
-        } catch (Exception ex) {
+        } catch(Exception ex) {
             System.out.println(ex.getMessage());
         }
 
