@@ -9,5 +9,5 @@ public class Program {
         System.out.printf("%.2f - %.2f\n", funcionario1.getSalario(), salarioLiquido90porcento);
         System.out.printf("%.2f - %.2f\n", funcionario1.getSalario(), salarioLiquidoAcrescimo50);
         System.out.printf("%.2f - %.2f\n", funcionario1.getSalario(), salarioLiquidoAcrescimo10porcento);
-    }
+    }   
 }
