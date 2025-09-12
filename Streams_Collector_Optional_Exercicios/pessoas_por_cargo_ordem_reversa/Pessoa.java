@@ -55,7 +55,9 @@ public class Pessoa implements Comparable<Pessoa> {
 
     @Override
     public String toString() {
-        return String.format("[%s] %s %s %s R$ %.6f", codigo, nome, cargo, idade, salario);
+        return String.format("[%d] %s %s %d R$ %s",
+                codigo, nome, cargo, idade,
+                String.format("%.6f", salario).replace('.', ','));
     }
 
     @Override
