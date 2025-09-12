@@ -14,4 +14,10 @@ public class Consulta {
                 .sorted(Comparator.comparing(Produto::getPreco).reversed())
                 .findFirst().orElse(null);
     }
+
+    public static List<Produto> obterProdutosPorPrecoMinimo(List<Produto> produtos, double precoMinimo) {
+        return produtos.stream()
+                .filter(produto -> produto.getPreco() >= precoMinimo)
+                .collect(Collectors.toList());
+    }
 }
